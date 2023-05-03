@@ -3,7 +3,7 @@
 if (isset($_POST["CEP"]))
 {
     $CEP = $_POST['CEP']; 
-    $url = "https://viacep.com.br/ws/$CEP/json/";  
+    $url = "https://viacep.com.br/ws/{$CEP}/json/";  
     $info = json_decode(file_get_contents($url));
 
     if ($info){
@@ -14,8 +14,8 @@ if (isset($_POST["CEP"]))
     }
 }
 
-echo readfile("index.html");
+//echo readfile("index.html");
 
-header("Location: http://localhost:5000/index.html");
+//header("Location: http://localhost:5000/index.html");
 exit;
 ?>

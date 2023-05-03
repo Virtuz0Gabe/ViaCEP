@@ -12,19 +12,37 @@
     <header>
         <img src="img/cep.svg" alt="">
 
+        <nav>
+            <ul>
+                <li><a href="https://viacep.com.br" target="_blank">Documentação</a></li>
+                <li><a href="https://viacep.com.br/ws/01001000/json/" target="_blank" >Exemplo</a></li>
+            </ul>
+        </nav>
+        
+
 
     </header>
     
 
-    <section class="principal">
-        <form action="API.php" method="POST">
-            Nome: <input type="text" name="CEP">
-            <input type="submit" value="Enviar" name="Enviar"> 
-        </form>
+    <section class="Container">
+
+        <div class="principal">
+            <form action="API.php" method="POST">  
+                <!-- type="number" define que só podem ser digitados números no campo
+                pattern="" -->
+                <input id="digitar" type="number" pattern="[0-9]*" maxlength="8" placeholder="Digite um CEP" name="CEP" required>             
+                <input id="botao" type="submit" value="Buscar" name="Enviar"> 
+            </form>
+
+        </div>
     </section>
 
-
-    <!-- CHAMAR API -->
+    <footer>
+        <p>
+            Desenvolvido com um restinho de 💜 por 
+            <a href="https://www.instagram.com/_virtuz_/" target="_blank" title="Link externo">Gabriel Werner kuhn - Vírtuz</a>
+        </p>
+    </footer>
 
 
 </body>
